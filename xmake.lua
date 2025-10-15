@@ -1,0 +1,10 @@
+set_license('LGPL-3.0')
+add_rules('mode.debug', 'mode.release')
+add_requires('objfw 1.4.1')
+
+target('ojlogger')
+  set_kind('binary')
+  add_packages('objfw', {public = true})
+  add_files('src/*.m')
+  add_includedirs('include', {public = true})
+  add_headerfiles('include/*.h')
