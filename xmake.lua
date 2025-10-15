@@ -3,7 +3,7 @@ add_rules('mode.debug', 'mode.release')
 add_requires('objfw 1.4.1')
 
 target('ojlogger')
-  set_kind('binary')
+  set_kind('static')
   add_packages('objfw', {public = true})
   add_files('src/*.m')
   add_includedirs('include', {public = true})
